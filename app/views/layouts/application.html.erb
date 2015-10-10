@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja de camisetas</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= nav_bar brand: "Loja de Camisetas", brand_link: root_path do %>
+		<%= form_tag produto_busca_path, class: "navbar-form navbar-right", method: :get do %>
+			<div class="form-group">
+				<%= text_field_tag :nome, nil %>
+				<%= button_to "Buscar", nil %> 
+			</div>
+		<% end %>	
+	<% end %>
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>
