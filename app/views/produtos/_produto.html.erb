@@ -1,0 +1,17 @@
+<tr>
+	<td><%= produto.nome %></td>
+	<td><%= produto.descricao %></td>
+	<td><%= produto.preco %></td>
+	<td><%= produto.quantidade %></td>
+	<td>
+		<%= button_to produto, method: :delete, class: "btn btn-danger",
+				data: { confirm: "Deseja realmente excluir #{produto.nome} ?"} do %>
+				<i class="fa fa-trash-o"> Remover</i>
+		<% end %>		
+	</td>
+	<td>
+		<%= link_to edit_produto_path(produto), class: "btn btn-default" do %>
+			<i class="fa fa-edit"> Atualizar</i>
+		<% end %>
+	</td>
+</tr>

@@ -11,7 +11,9 @@
 		<%= form_tag produto_busca_path, class: "navbar-form navbar-right", method: :get do %>
 			<div class="form-group">
 				<%= text_field_tag :nome, nil %>
-				<%= button_to "Buscar", nil %> 
+				<%= button_to nil do %>
+					<i class="fa fa-search"> Buscar</i>
+				<% end %> 
 			</div>
 		<% end %>	
 	<% end %>
